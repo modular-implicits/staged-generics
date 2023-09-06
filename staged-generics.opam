@@ -1,0 +1,23 @@
+opam-version: "2.0"
+name: "staged-generics"
+synopsis: "Generics with support for staging"
+version: "dev"
+maintainer: "yallop@gmail.com"
+authors: ["Patrick Reader"]
+homepage: "https://github.com/modular-implicits/staged-generics"
+dev-repo: "git+https://github.com/modular-implicits/staged-generics.git"
+bug-reports: "http://github.com/modular-implicits/staged-generics/issues"
+license: "GPL-3.0-only"
+build: [
+  ["dune" "subst"] {dev}
+  ["dune" "build" "-p" name "-j" jobs]
+  ["dune" "runtest" "-p" name "-j" jobs] {with-test}
+]
+
+depends: [
+   "dune" {build}
+   "imp"
+   "ocaml-variants"
+     { = "4.02.1+modular-implicits-ber" }
+]
+
