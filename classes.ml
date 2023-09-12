@@ -20,6 +20,11 @@ module type Sum = sig
     t code -> 'r code
 end
 
+module type Unit = sig
+  type t
+  val unit : t code
+end
+
 module type Wrapper = sig
   type t
   type inner
