@@ -26,3 +26,8 @@ module type Wrapper = sig
   val wrap : inner code -> t code
   val unwrap : t code -> inner code
 end
+
+module type Void = sig
+  type t
+  val absurd : t -> 'a
+end
