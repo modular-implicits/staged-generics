@@ -49,3 +49,11 @@ implicit module List {A: Any}
     | x :: xs -> .~(fb .< (x, xs) >.)
   >.
 end
+
+implicit module Unit
+: Unit
+  with type t = unit
+= struct
+  type t = unit
+  let unit = .< () >.
+end
