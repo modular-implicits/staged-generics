@@ -1,0 +1,5 @@
+(library
+ (name staged_generics)
+ (public_name staged-generics)
+ (libraries imp)
+ (modules Classes Instances))
