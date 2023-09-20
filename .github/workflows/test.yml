@@ -11,4 +11,7 @@ jobs:
         with:
           ocaml-compiler: ocaml-variants.4.02.1+modular-implicits-ber
           dune-cache: true
+          opam-repositories: |
+            default: https://github.com/ocaml/opam-repository.git
+            modular-implicits: https://github.com/modular-implicits/modular-implicits-opam.git#master
       - run: opam pin add --yes .
